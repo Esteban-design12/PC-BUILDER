@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login</title>
+  <link rel="stylesheet" href="stylesLogin.css" />
+</head>
+<body>
+<!-- Fondo animado -->
+  <div class="auth-bg" aria-hidden="true">
+    <div class="auth-grid"></div>
+    <div class="auth-glow"></div>
+    <div class="auth-orbs">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+
+ 
+
+  <main class="wrap">
+    <section class="card">
+      <form class="panel" id="login-panel" autocomplete="on">
+        <h1>Bienvenido de nuevo</h1>
+        <p class="subtitle">Ingresa con tu cuenta para continuar</p>
+
+        <div class="input-group">
+          <label for="login-email">Correo</label>
+          <input id="login-email" type="email" placeholder="tucorreo@dominio.com" required />
+        </div>
+
+        <div class="input-group">
+          <label for="login-pass">Contraseña</label>
+          <input id="login-pass" type="password" placeholder="••••••••" minlength="6" required />
+        </div>
+
+        <div class="row">
+          <label class="checkbox">
+            <input type="checkbox" id="remember" />
+            <span>Recordarme</span>
+          </label>
+          <a class="link" href="#">¿Olvidaste tu contraseña?</a>
+        </div>
+
+        <button type="submit" class="btn primary">Entrar</button>
+
+        <p class="switch">
+          ¿No tienes cuenta? <a href="Register.html" class="link">Regístrate aquí</a>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 MySite — Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+document.getElementById("login-panel").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const email = document.getElementById('login-email').value.trim();
+  let name = localStorage.getItem('user:name');
+  if (!name) {
+    // deriva un nombre del email si no existía
+    name = (email.split('@')[0] || 'Usuario').replace(/[\.\_\-]+/g,' ');
+    name = name.charAt(0).toUpperCase() + name.slice(1);
+  }
+  localStorage.setItem('user:email', email);
+  localStorage.setItem('user:name', name);
+  localStorage.setItem('user:logged', 'true');
+  window.location.href = "index.html";
+});
+
+  </script>
+
+ 
+<script src="userAuth.js"></script>
+
+</body>
+</html>
