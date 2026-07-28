@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Parts</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="main-header">
+        <!-- Logo de la página -->
+        <div class="logo">Logo</div>
+
+        <!-- Botones Home y My PC -->
+        <div class="header-btns">
+            <button class="btn-black">Home</button>
+            <button class="btn-white">My PC</button>
+        </div>
+
+        <!-- Título "Choose your parts" dentro del contenedor -->
+        <div class="page-title">
+            <h1>Choose your parts</h1>
+        </div>
+    </header>
+
+    <!-- COMPONENTS TABLE (tabla con los componentes de PC) -->
+    <section class="components-section">
+        <table>
+            <thead>
+                <tr>
+                    <!-- Cabecera de la tabla -->
+                    <th>Component</th>
+                    <th>Selection</th>
+                    <th>Shipping</th>
+                    <th>Availability</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Fila para cada componente -->
+                <tr>
+                    <!-- Fila de CPU -->
+                    <td><span class="tag cpu">CPU</span></td>
+                    <td class="product">
+                        <img src="../images/Radeon.jfif" alt="CPU">
+                        AMD Ryzen 9600x 6-core processor
+                    </td>
+                    <td>$5.99</td>
+                    <td>In stock</td>
+                    <td>$198.00</td>
+                </tr>
+                <!-- Fila para el CPU Cooler -->
+                <tr>
+                    <td><span class="tag cpu-cooler">CPU Cooler</span></td>
+                    <td><button class="choose" onclick="expandOptions('cpuCooler')">+ Choose a CPU cooler</button></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <!-- Filas para otros componentes -->
+                <tr>
+                    <td><span class="tag motherboard">Motherboard</span></td>
+                    <td><button class="choose" onclick="expandOptions('motherboard')">+ Choose a Motherboard</button></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><span class="tag memory">Memory</span></td>
+                    <td><button class="choose" onclick="expandOptions('memory')">+ Choose Memory</button></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><span class="tag storage">Storage</span></td>
+                    <td><button class="choose" onclick="expandOptions('storage')">+ Choose Storage</button></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><span class="tag gpu">Video Card</span></td>
+                    <td><button class="choose" onclick="expandOptions('gpu')">+ Choose a GPU</button></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><span class="tag case">Case</span></td>
+                    <td><button class="choose" onclick="expandOptions('case')">+ Choose a Case</button></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><span class="tag psu">Power Supply</span></td>
+                    <td><button class="choose" onclick="expandOptions('psu')">+ Choose a Power Supply</button></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="total">Total: $198.00</div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-left">
+            <div class="site-name">Build your PC</div>
+            <div class="social-icons">
+                <img src="../images/fb.png" alt="Facebook">
+                <img src="../images/tw.png" alt="Twitter">
+                <img src="../images/ig.png" alt="Instagram">
+                <img src="../images/youtube.png" alt="YouTube">
+            </div>
+        </div>
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="footer-contacts">
+            <p>Efrain Esteban Murcia Robayo - +57-3298843697</p>
+            <p>Esteban Eduardo Olier Quiroga - +8571696</p>
+            <p>Juan Manuel Sandoval Velasco - +57-3143050935</p>
+            <p>Julian Santiago Sierra Rubiano - +65546464688</p>
+        </div>
+    </footer>
+</body>
+</html>
